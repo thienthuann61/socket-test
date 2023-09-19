@@ -1,0 +1,85 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Fuggles&display=swap");
+
+:root {
+  --primary-color: #253794;
+  --primary-light-color: #bac5fd;
+  --secondary-color: #8358e6;
+  --danger-color: #fc466b;
+  --success-color: #45e65f;
+  --white-color: #fff;
+  --dark-color: #000;
+}
+
+.navbar-brand {
+  display: inline-block;
+  color: transparent;
+  background-image: linear-gradient(
+    to right,
+    var(--danger-color),
+    var(--primary-color)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-family: "Dancing Script", cursive;
+  font-size: 50px;
+
+  &:hover {
+    color: transparent !important;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.auth-layout {
+  background-color: var(--primary-light-color);
+}
+
+.form-control {
+  box-shadow: none !important;
+  transition: border 0.3s linear !important;
+
+  &:focus {
+    border-color: var(--primary-color);
+  }
+}
+
+.form-create-borrower {
+  width: calc(100% - 48px);
+  max-width: 600px;
+  background-color: var(--white-color);
+}
+
+.form-title {
+  color: var(--primary-color);
+  letter-spacing: 0.4px;
+}
+
+.btn.btn-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.dashboard-report {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 24px;
+}
+
+* > .dashboard-info {
+  color: var(--white-color);
+
+  &:nth-child(4n + 1) {
+    background-color: var(--primary-color);
+  }
+  &:nth-child(4n + 2) {
+    background-color: var(--success-color);
+  }
+  &:nth-child(4n + 3) {
+    background-color: var(--danger-color);
+  }
+  &:nth-child(4n + 4) {
+    background-color: var(--secondary-color);
+  }
+}
